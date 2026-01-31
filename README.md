@@ -1,28 +1,56 @@
+<div align="center">
+
 # Hi 👋, I'm Qingyuan Liu
 
 ### Always curious—building, iterating, and growing one commit at a time.
 
-<h3 align="left">🎓 Education</h3>
-- **2022 - 2026** &nbsp; 🏛️ **Sun Yat-sen University** — Electronic Information  
+<!-- Profile Views Badge -->
+<img src="https://komarev.com/ghpvc/?username=Tsing-yuan&label=Profile%20views&color=0e75b6&style=flat" alt="Tsing-yuan" />
 
-- **2026 - ?** &nbsp; 🏛️ **University of Science and Technology of China** — Automation
+<br/>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=Tsing-yuan&label=Profile views&color=0e75b6&style=flat" alt="Tsing-yuan" /> </p>
+<!-- Connect / Contact Badges -->
+<a href="mailto:lqy770783835@163.com">
+  <img src="https://img.shields.io/badge/Email-lqy770783835%40163.com-red?style=flat-square&logo=gmail" alt="Email" />
+</a>
+<a href="https://github.com/Tsing-yuan">
+  <img src="https://img.shields.io/badge/GitHub-Tsing--yuan-181717?style=flat-square&logo=github" alt="GitHub" />
+</a>
 
-- 🔭 I'm currently working on **multimodal LLMs—vision-language alignment, fine-tuning, and evaluation.**
-- 🌱 I'm currently learning **large language models (LLMs)**
-- 🤝 I'm looking for help with **internship opportunities in Large Language Models (LLM), Vision-Language Models (VLM), and AI Agents.**
-- 📫 How to reach me **lqy770783835@163.com**
+</div>
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://github.com/Tsing-yuan" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/github.svg" alt="Tsing-yuan" height="30" width="40" /></a>
-</p>
+---
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> 
-<a href="https://developer.mozilla.org/en-US/docs/Web/cplusplus" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=cpp" alt="cplusplus" width="40" height="40"/> </a> 
-<a href="https://developer.mozilla.org/en-US/docs/Web/jupyter" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg" alt="jupyter" width="40" height="40"/> </a> 
-<a href="https://developer.mozilla.org/en-US/docs/Web/python" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=py" alt="python" width="40" height="40"/> </a> 
-<a href="https://developer.mozilla.org/en-US/docs/Web/pytorch" target="_blank" rel="noreferrer"> <img src="https://skillicons.dev/icons?i=pytorch" alt="pytorch" width="40" height="40"/> </a>
-</p>
+### 🎓 Education
+
+| Years | Institution | Major |
+| :--- | :--- | :--- |
+| **2026 - ?** | 🏛️ **University of Science and Technology of China (USTC)** | Automation |
+| **2022 - 2026** | 🏛️ **Sun Yat-sen University (SYSU)** | Electronic Information |
+
+---
+
+### 🔭 About Me
+
+- 🔭 I'm currently working on **Multimodal LLMs** (Vision-Language Alignment, Fine-tuning, and Evaluation).
+- 🌱 I'm currently learning **Large Language Models (LLMs)**.
+- 🤝 I'm looking for **Internship opportunities** in **LLMs, Vision-Language Models (VLM), and AI Agents**.
+
+---
+
+### 🛠️ Languages and Tools
+
+<div align="left">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" alt="Jupyter" />
+</div>
+
+<br/>
+
+<!-- Optional: Add GitHub Stats if you like -->
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Tsing-yuan&show_icons=true&theme=radical" height="150" alt="stats graph" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Tsing-yuan&layout=compact&theme=radical" height="150" alt="languages graph" />
+</div>
