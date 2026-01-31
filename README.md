@@ -4,6 +4,7 @@
 
 <h3 align="left">🎓 Education</h3>
 - **2022 - 2026** &nbsp; 🏛️ **Sun Yat-sen University** — Electronic Information  
+
 - **2026 - ?** &nbsp; 🏛️ **University of Science and Technology of China** — Automation
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=Tsing-yuan&label=Profile views&color=0e75b6&style=flat" alt="Tsing-yuan" /> </p>
