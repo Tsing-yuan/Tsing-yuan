@@ -1,7 +1,5 @@
 ![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&random=false&width=500&lines=Hi👋+I+am+Qingyuan+Liu+😊;🚀+Focus+on+Multimodal+LLMs;🏫+Master+Student+at+USTC.)
 
-### **Hi ! ✨ I'm Tsing-yuan.**
-
 ### 🎓 Education
 * 🏫 **University of Science and Technology of China (USTC)** · Automation | 2026 -
 * 🏫 **Sun Yat-sen University (SYSU)** · Electronic Information | 2022 - 2026
