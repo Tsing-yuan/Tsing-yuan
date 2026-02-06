@@ -22,7 +22,3 @@
 
 <br/>
 
-<div align="center">
-<img src="https://ghproxy.com/https://github-readme-stats.vercel.app/api?username=Tsing-yuan&show_icons=true&theme=radical" height="150" />
-<img src="https://ghproxy.com/https://github-readme-stats.vercel.app/api/top-langs/?username=Tsing-yuan&layout=compact&theme=radical" height="150" /
-</div>
