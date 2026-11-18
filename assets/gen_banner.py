@@ -84,6 +84,30 @@ def phrase_width_series(pi):
     return s
 
 caret_series = [(0.0, round(TX + len(PHRASES[0]) * CW + 2, 1))]
+
+def frame_windows():
+    """(phrase, chars) -> list of (start, end) times when that exact text is shown."""
+    segs, cur, t0 = {}, (0, len(PHRASES[0])), 0.0
+    for tt, p, c in events:
+        if tt > t0 and cur[1] > 0:
+            segs.setdefault(cur, []).append((t0, tt))
+        cur, t0 = (p, c), tt
+    if CYCLE > t0 and cur[1] > 0:
+        segs.setdefault(cur, []).append((t0, CYCLE))
+    return segs
+
+def window_anim(wins):
+    pts = {0.0: 1 if any(w0 == 0 for w0, _ in wins) else 0}
+    for w0, w1 in wins:
+        pts[round(w0, 4)] = 1
+        if w1 < CYCLE - 1e-6:
+            pts[round(w1, 4)] = 0
+    keys = sorted(pts)
+    kt = ";".join(f"{k / CYCLE:.5f}" for k in keys)
+    vals = ";".join(str(pts[k]) for k in keys)
+    return (f'<animate attributeName="opacity" dur="{CYCLE:.3f}s" repeatCount="indefinite" '
+            f'calcMode="discrete" keyTimes="{kt}" values="{vals}"/>')
+
 for tt, p, c in events:
     caret_series.append((tt, round(TX + c * CW + 2, 1)))
 
@@ -114,9 +138,6 @@ def build(theme):
     <animateTransform attributeName="gradientTransform" type="translate" values="0 0;-420 0;0 0" dur="10s" repeatCount="indefinite"/>
   </linearGradient>
   <clipPath id="av"><circle cx="200" cy="170" r="100"/></clipPath>''')
-    for pi in range(len(PHRASES)):
-        o.append(f'  <clipPath id="cp{pi}"><rect x="{TX}" y="{TY - 30}" height="42" width="{phrase_width_series(pi)[0][1]}">'
-                 f'{discrete_anim("width", phrase_width_series(pi))}</rect></clipPath>')
     o.append('</defs>')
 
     o.append(f'<rect width="{W}" height="{H}" rx="22" fill="{c["bg"]}"/>')
@@ -159,9 +180,12 @@ def build(theme):
     o.append(f'<g class="fade" style="animation-delay:.45s">')
     o.append(f'<rect x="352" y="{TY - 24}" width="118" height="32" rx="8" fill="{c["chip"]}"/>')
     o.append(f'<text x="411" y="{TY - 2}" text-anchor="middle" font-family="{MONO}" font-size="16" fill="{c["secondary"]}">Exploring</text>')
-    for pi, ph in enumerate(PHRASES):
+    for (pi, cc), wins in frame_windows().items():
+        txt = PHRASES[pi][:cc]
+        base = "1" if any(w0 == 0 for w0, _ in wins) else "0"
         o.append(f'<text x="{TX}" y="{TY}" font-family="{MONO}" font-size="26" font-weight="600" fill="{c["ink"]}" '
-                 f'textLength="{len(ph) * CW:.1f}" lengthAdjust="spacingAndGlyphs" clip-path="url(#cp{pi})">{ph}</text>')
+                 f'textLength="{len(txt) * CW:.1f}" lengthAdjust="spacingAndGlyphs" opacity="{base}">{txt}'
+                 f'{window_anim(wins)}</text>')
     o.append(f'<rect class="caret" y="{TY - 24}" width="3" height="30" rx="1.5" fill="{c["accent"]}" x="{caret_series[0][1]}">'
              f'{discrete_anim("x", caret_series)}</rect>')
     o.append('</g>')
