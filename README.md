@@ -70,8 +70,7 @@
 
 ## ✍️ Latest Blog Posts
 
-<!-- BLOG-POST-LIST:START -->
-- [你好！](https://tsing-yuan.github.io/posts/2026-11-16-%E4%BD%A0%E5%A5%BD/) <sub>2026-11-16</sub>
+<!-- BLOG-POST-LIST:START -->- [你好！](https://tsing-yuan.github.io/posts/2026-11-16-%E4%BD%A0%E5%A5%BD/) <sub>2026-11-15</sub>
 <!-- BLOG-POST-LIST:END -->
 
 <sub>➡️ More on <a href="https://tsing-yuan.github.io/posts/">my blog</a> — this list updates automatically.</sub>
