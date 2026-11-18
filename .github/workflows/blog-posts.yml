@@ -14,10 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: gautamkrishnar/blog-post-workflow@v1
+        env:
+          TZ: Asia/Shanghai
         with:
           feed_list: "https://tsing-yuan.github.io/posts/index.xml"
           max_post_count: 5
-          template: "- [$title]($url) <sub>$date</sub>$newline"
+          template: "<li><a href=\"$url\">$title</a> <sub>$date</sub></li>$newline"
           date_format: "yyyy-mm-dd"
           commit_message: "Update latest blog posts"
           committer_username: "github-actions[bot]"
