@@ -19,8 +19,8 @@ SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-se
 # ---------- network ----------
 rng = random.Random(7)
 nodes = []
-while len(nodes) < 34:
-    x, y = rng.uniform(840, 1170), rng.uniform(30, 310)
+while len(nodes) < 30:
+    x, y = rng.uniform(885, 1172), rng.uniform(30, 310)
     if all(math.hypot(x - a, y - b) > 42 for a, b in nodes):
         nodes.append((x, y))
 for _ in range(10):  # faint scattered nodes elsewhere
@@ -41,7 +41,7 @@ def walk(start, steps):
     return path
 
 pulse_paths = []
-starts = [i for i in range(34) if len(adj[i]) >= 2]
+starts = [i for i in range(30) if len(adj[i]) >= 2]
 rng.shuffle(starts)
 for s in starts:
     p = walk(s, 5)
@@ -128,13 +128,13 @@ def build(theme):
     for k, (i, j) in enumerate(edges):
         (x1, y1), (x2, y2) = nodes[i], nodes[j]
         d = math.hypot(x1 - x2, y1 - y2)
-        op = (1 - d / 105) * (0.45 if i < 34 and j < 34 else 0.2)
+        op = (1 - d / 105) * (0.45 if i < 30 and j < 30 else 0.2)
         o.append(f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" '
                  f'stroke-opacity="{op:.2f}" style="animation-delay:{(k % 17) * 0.08:.2f}s"/>')
     o.append('</g>')
     for k, (x, y) in enumerate(nodes):
-        hot = k % 8 == 0 and k < 34
-        r = 3.2 if hot else (2.2 if k < 34 else 1.6)
+        hot = k % 8 == 0 and k < 30
+        r = 3.2 if hot else (2.2 if k < 30 else 1.6)
         fill = c["accent"] if hot else c["ink"]
         o.append(f'<circle class="node" cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{fill}" '
                  f'style="animation-delay:{(k * 0.37) % 4:.2f}s"/>')
